@@ -38,10 +38,10 @@ const InfoContacto = () => {
     
           {/* Segundo cuadro */}
           <Box
-            border="solid"
+            
             padding={"5px"}
-            bg={"gray.200"}
-            borderColor={"black"}
+            bg={"#E9FF8B"}
+           
             minW={"400px"}
             maxH={"300px"}
             borderRadius={"25px"}
@@ -52,13 +52,13 @@ const InfoContacto = () => {
             position={"relative"}
             
           >
-            <Heading  bg={"#DDEE99"} borderRadius={"25px"}>Correo Electrónico</Heading>
+            <Heading  bg={"white"} borderRadius={"25px"}>Correo Electrónico</Heading>
             <Text fontSize={"15px"} padding={"10px"}>josebravoparada@gmail.com</Text>
 
-            <Heading bg={"#DDEE99"} borderRadius={"25px"}>WhatsApp</Heading>
+            <Heading bg={"white"} borderRadius={"25px"}>WhatsApp</Heading>
             <Text padding={"10px"} bg={""}>+54 299 6262455</Text>
 
-            <Heading bg={"#DDEE99"} borderRadius={"25px"}>LinkedIn</Heading>
+            <Heading bg={"white"} borderRadius={"25px"}>LinkedIn</Heading>
             <Text padding={"10px"} bg={""}>https://www.linkedin.com/in/josesantosbravo/</Text>
           </Box>
         </Container>

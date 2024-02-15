@@ -16,7 +16,7 @@ export default function SearchBar() {
       zIndex="999"
       px="4"
       transition="background 0.5s ease"
-      bgGradient="linear(to-b, #F4FFC5, #A5C136)"
+      bgGradient="linear(to-b, #FFFFFF, #E9FF8B)"
     >
       <Box fontWeight="bold" paddingRight="50px">
         <NavLink

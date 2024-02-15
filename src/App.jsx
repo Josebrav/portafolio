@@ -2,7 +2,7 @@ import { Container, Stack } from "@chakra-ui/react"
 import Home from "./Components/Home"
 import {Route,Routes} from 'react-router-dom'
 import NavBar from "./Components/Nav"
-import image from './assets/fondo5.jpg' 
+import image from './assets/fonblan.jpg' 
 
 import InfoContacto from './Components/InfoContacto'
 
