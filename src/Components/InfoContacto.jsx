@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Text, Container, Image, Button, Input, FormLabel, Heading } from "@chakra-ui/react";
+import { Box, Text, Container, Image, Button, Input, FormLabel, Heading,Link } from "@chakra-ui/react";
 import cv from '../assets/curriculum.png';
 import cvJoseBravo from './cvJoseBravo.docx'
+import WSP from "../assets/wspicon.png"
 
 const InfoContacto = () => {
 
@@ -11,6 +12,8 @@ const InfoContacto = () => {
         link.download = 'cvJoseBravo.docx'; // Nombre del archivo que se descargará
         link.click();
     };
+
+    const whatsappLink = "https://wa.me/542996262455"
     return (
         <Container
           marginTop={"150px"}
@@ -32,8 +35,8 @@ const InfoContacto = () => {
             
         
           >
-            <Image src={cv} alt='cv' />
-            <Button marginTop={"10px"} onClick={handleDescargarCV}>Descargar CV</Button>
+            <Image src={cv} alt='cv' border={"solid"} borderColor={"gray"}/>
+            <Button border={"solid"} borderColor={"gray"} marginTop={"10px"} onClick={handleDescargarCV} bg={"#E9FF8B"}>Descargar CV</Button>
           </Box>
     
           {/* Segundo cuadro */}
@@ -52,13 +55,22 @@ const InfoContacto = () => {
             position={"relative"}
             
           >
-            <Heading  bg={"white"} borderRadius={"25px"}>Correo Electrónico</Heading>
+            <Heading  bg={"white"} borderRadius={"25px"} fontSize={"30px"} p={2}>Correo Electrónico</Heading>
             <Text fontSize={"15px"} padding={"10px"}>josebravoparada@gmail.com</Text>
 
-            <Heading bg={"white"} borderRadius={"25px"}>WhatsApp</Heading>
-            <Text padding={"10px"} bg={""}>+54 299 6262455</Text>
+            <Heading bg={"white"} borderRadius={"25px"} fontSize={"30px"} p={2}>WhatsApp</Heading>
+            <Button  color={'white'} fontWeight={'bold'} mt={'0.5rem'} variant={'link'} mb={"10px"}>
+                  <Link href={whatsappLink} isExternal>
+                    <Box
+                      w="30px"
+                      h="30px"
+                    >
+                      <Image src={WSP} alt="WhatsApp" w="100%" h="100%" />
+                    </Box>
+                  </Link>
+                </Button>
 
-            <Heading bg={"white"} borderRadius={"25px"}>LinkedIn</Heading>
+            <Heading bg={"white"} borderRadius={"25px"} fontSize={"30px"} p={2}>LinkedIn</Heading>
             <Text padding={"10px"} bg={""}>https://www.linkedin.com/in/josesantosbravo/</Text>
           </Box>
         </Container>
