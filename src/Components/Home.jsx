@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Flex, Container, Image, Heading } from "@chakra-ui/react";
+import { Box, Text, Flex, Container, Image, Heading, Stack, Button } from "@chakra-ui/react";
 import fotocv from '../assets/fotocv.jpg';
 import uno from '../Iconos/1.png'
 import dos from '../Iconos/2.png'
@@ -14,11 +14,16 @@ import diez from '../Iconos/10.png'
 import once from '../Iconos/11.png'
 import doce from '../Iconos/12.webp'
 import trece from '../Iconos/13.png'
+import Drivers from '../assets/Drivers.png'
 
 
 const Home = () => {
   return (
-    <Container>
+    <Flex
+    display={"flex"}
+    flexDirection="column"
+    
+  >
       <Container
         marginTop={"100px"}
         display="grid"
@@ -78,7 +83,8 @@ const Home = () => {
           </Text>
         </Box>
       </Container>
-      <Container display={"flex"} justifyContent={"flex-start"} gap={4} w={"1300px"}>
+      <Container  gap={4} w={"1300px"} display="flex"
+            >
       <Box
           borderRadius={"20px"}
           w={"1200px"}
@@ -91,7 +97,7 @@ const Home = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-          >Tecnologías que manejo</Heading>
+          >Skills</Heading>
           <Flex flexWrap="wrap" justifyContent="center" padding={"10px"}>
             {/* Primera fila de iconos */}
             <Image src={uno} boxSize="60px" m={1} />
@@ -113,7 +119,46 @@ const Home = () => {
           </Flex>
         </Box>
       </Container>
-    </Container>
+
+      {/* <Stack spacing={4} align="center" display={"flex"} marginTop={"30px"}>
+      <Heading display="flex"
+            justifyContent="center"
+            alignItems="center">Proyectos</Heading>
+      <Box
+        border="solid"
+        minW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
+        h={{ base: "200px", md: "250px", lg: "300px" }}
+        ml={{ base: 0, md: "0" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        display="flex"
+      >
+        
+        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0}>
+          <Heading display="flex"
+            justifyContent="center"
+            alignItems="center">Drivers</Heading>
+      <Image
+        w={"300px"}
+        h="200px"
+        src={Drivers}
+        
+        alt="Descripción de la imagen"
+        p={0}
+      />
+      <Button >Detalles</Button>
+    </Box>
+
+        <Box border={"solid"} w={"300px"} minH={"280px"} m={"40px"}>
+          Contenido de la segunda caja
+        </Box>
+
+        <Box border={"solid"} w={"300px"} minH={"280px"} m={"40px"}>
+          Contenido de la tercera caja
+        </Box>
+      </Box>
+    </Stack> */}
+    </Flex>
   );
 };
 

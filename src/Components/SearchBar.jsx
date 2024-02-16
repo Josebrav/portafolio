@@ -15,10 +15,10 @@ export default function SearchBar() {
       left="0"
       zIndex="999"
       px="4"
-      transition="background 0.5s ease"
+      transition="background 0.5s ease, transform 0.3s" // Agregamos la propiedad de transición para el fondo y el efecto de agrandamiento
       bgGradient="linear(to-b, #FFFFFF, #E9FF8B)"
     >
-      <Box fontWeight="bold" paddingRight="50px">
+      <Box fontWeight="bold" paddingRight="50px" transition="transform 0.3s" _hover={{ transform: "scale(1.1)" }}>
         <NavLink
           exact
           to="/"
@@ -31,7 +31,7 @@ export default function SearchBar() {
         </NavLink>
       </Box>
 
-      <Box fontWeight="bold" paddingRight="50px">
+      <Box fontWeight="bold" paddingRight="50px" transition="transform 0.3s" _hover={{ transform: "scale(1.1)" }}>
         <NavLink
           to="/Contacto"
           activeStyle={{
