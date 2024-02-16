@@ -15,6 +15,8 @@ import once from '../Iconos/11.png'
 import doce from '../Iconos/12.webp'
 import trece from '../Iconos/13.png'
 import Drivers from '../assets/Drivers.png'
+import Vamos from '../assets/vamos.png'
+import Rick from '../assets/Rick&Morty.png'
 
 
 const Home = () => {
@@ -120,13 +122,15 @@ const Home = () => {
         </Box>
       </Container>
 
-      {/* <Stack spacing={4} align="center" display={"flex"} marginTop={"30px"}>
+      <Stack spacing={4} align="center" display={"flex"} marginTop={"30px"} >
       <Heading display="flex"
-            justifyContent="center"
+            justifyContent="flex-start"
             alignItems="center">Proyectos</Heading>
       <Box
-        border="solid"
-        minW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
+      bg={"#E9FF8B"}
+      borderRadius={"20px"}
+        
+        maxW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
         h={{ base: "200px", md: "250px", lg: "300px" }}
         ml={{ base: 0, md: "0" }}
         alignItems={"center"}
@@ -134,7 +138,7 @@ const Home = () => {
         display="flex"
       >
         
-        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0}>
+        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0} >
           <Heading display="flex"
             justifyContent="center"
             alignItems="center">Drivers</Heading>
@@ -146,18 +150,37 @@ const Home = () => {
         alt="Descripción de la imagen"
         p={0}
       />
-      <Button >Detalles</Button>
+      <Button mt={"10px"} ml={"90px"}>Detalles</Button>
     </Box>
 
-        <Box border={"solid"} w={"300px"} minH={"280px"} m={"40px"}>
-          Contenido de la segunda caja
+        <Box  w={"300px"} minH={"280px"} m={"40px"}>
+        <Heading display="flex"
+            justifyContent="center"
+            alignItems="center">Vamos</Heading>
+          <Image
+          w={"300px"}
+          h="200px"
+          src={Vamos}
+          />
+          <Button mt={"10px"} ml={"90px"}>Detalles</Button>
         </Box>
 
-        <Box border={"solid"} w={"300px"} minH={"280px"} m={"40px"}>
-          Contenido de la tercera caja
-        </Box>
+        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0} >
+          <Heading display="flex"
+            justifyContent="center"
+            alignItems="center">Rick&Morty</Heading>
+      <Image
+        w={"300px"}
+        h="200px"
+        src={Rick}
+        
+        alt="Descripción de la imagen"
+        p={0}
+      />
+      <Button mt={"10px"} ml={"90px"}>Detalles</Button>
+    </Box>
       </Box>
-    </Stack> */}
+    </Stack>
     </Flex>
   );
 };
