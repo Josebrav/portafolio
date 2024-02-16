@@ -136,6 +136,8 @@ const Home = () => {
         alignItems={"center"}
         justifyContent={"center"}
         display="flex"
+        transition="transform 0.3s" // Agregamos una transición para suavizar el efecto
+          _hover={{ transform: "scale(1.05)" }}
       >
         
         <Box  w={"300px"} minH={"200px"} m={"40px"} p={0} >
