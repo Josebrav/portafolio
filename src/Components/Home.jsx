@@ -36,8 +36,7 @@ const Home = () => {
       html: `
       Rick&Morty fue el primer proyecto que hice en mi trayecto como programador, 
       tiene panel de inicio de sesion, luego se puede interactuar con cartas, agregar, borrar, marcar 
-      como favoritas. Utilice React, Redux, Node.js, Express, Api, Sequelize.
-      mejorame esto`,
+      como favoritas. Utilice React, Redux, Node.js, Express, Api, Sequelize.`,
       confirmButtonText: `
       <i class="fa fa-thumbs-up"></i> OK!
     `,
