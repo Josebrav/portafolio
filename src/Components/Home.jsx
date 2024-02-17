@@ -134,7 +134,7 @@ donde implementé tecnologías como React, Chakra Express, Node.js, Sequelize y 
             justifyContent="center"
             alignItems="center"
             mb={"20px"}>¿Quién soy?</Heading>
-          <Text>
+          <Text fontFamily={"monospace"} fontSize={"15px"}>
             ¡Hola! 👋 Soy un apasionado Desarrollador Full Stack con casi
             un año de experiencia. Mi enfoque se centra en la creación de soluciones tecnológicas
             eficientes, desde el desarrollo de interfaces dinámicas hasta la implementación

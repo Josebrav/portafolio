@@ -20,7 +20,7 @@ export default function SearchBar() {
     >
       <Box fontWeight="bold" paddingRight="50px" transition="transform 0.3s" _hover={{ transform: "scale(1.1)" }}>
         <NavLink
-          exact
+          color='white'
           to="/"
           activeStyle={{
             color: 'white',
