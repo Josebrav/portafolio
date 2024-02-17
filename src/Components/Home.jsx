@@ -106,6 +106,7 @@ donde implementé tecnologías como React, Chakra Express, Node.js, Sequelize y 
           padding={{ base: "20px", md: "0" }}
           transition="transform 0.3s" // Agregamos una transición para suavizar el efecto
           _hover={{ transform: "scale(1.05)" }} // Aplicamos el efecto de agrandamiento al pasar el mouse
+        
         >
           <Image
             src={fotocv}
@@ -115,8 +116,8 @@ donde implementé tecnologías como React, Chakra Express, Node.js, Sequelize y 
             padding={"10px"}
           />
           <Flex flexDirection="column" alignItems="center" mt={4}>
-            <Heading>José Bravo</Heading>
-            <Text>Full Stack Developer</Text>
+            <Heading >José Bravo</Heading>
+            <Text pb={"20px"}>Full Stack Developer</Text>
           </Flex>
         </Box>
 
