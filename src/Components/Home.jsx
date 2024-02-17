@@ -1,5 +1,9 @@
-import React from 'react';
-import { Box, Text, Flex, Container, Image, Heading, Stack, Button } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import Swal from 'sweetalert2'
+import {
+  Box, Text, Flex, Container, Image, Heading, Stack,
+  Button, Alert, AlertIcon, AlertTitle, AlertDescription
+} from "@chakra-ui/react";
 import fotocv from '../assets/fotocv.jpg';
 import uno from '../Iconos/1.png'
 import dos from '../Iconos/2.png'
@@ -17,15 +21,72 @@ import trece from '../Iconos/13.png'
 import Drivers from '../assets/Drivers.png'
 import Vamos from '../assets/vamos.png'
 import Rick from '../assets/Rick&Morty.png'
+import './home.css'
 
 
 const Home = () => {
+
+
+
+  const abrirRick = () => {
+
+    Swal.fire({
+      title: "Rick&Morty",
+
+      html: `
+      Rick&Morty fue el primer proyecto que hice en mi trayecto como programador, 
+      tiene panel de inicio de sesion, luego se puede interactuar con cartas, agregar, borrar, marcar 
+      como favoritas. Utilice React, Redux, Node.js, Express, Api, Sequelize.
+      mejorame esto`,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> OK!
+    `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+
+    })
+  };
+
+  const abrirVamos = () => {
+
+    Swal.fire({
+      title: "Vamos!!",
+
+      html: `
+      Proyecto para una ONG de Perú dedicada a prestar servicio de traslado aeropuerto diferentes zonas de la ciudad. Para Front-End se utilizó principalmente React y para Back-End Node.js., express, Sequelize.
+      Adicionalmente se integró Mercado Pago, Nodemailer, Firebase, Chakra , Local Storage y Cloudinary`,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> OK!
+    `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+
+    })
+  };
+
+  const abrirDrivers = () => {
+
+    Swal.fire({
+      title: "Drivers",
+
+      html: `
+Este proyecto individual fue desarrollado durante mi período de estudios en Henry, 
+donde implementé tecnologías como React, Chakra Express, Node.js, Sequelize y Redux.
+ Incluye diversas funciones, tales como la creación de conductores, la capacidad de ordenar 
+ según diferentes filtros y la implementación de filtros combinados.`,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> OK!
+    `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+
+    })
+  };
+
+
   return (
     <Flex
-    display={"flex"}
-    flexDirection="column"
-    
-  >
+      display={"flex"}
+      flexDirection="column"
+
+    >
       <Container
         marginTop={"100px"}
         display="grid"
@@ -75,19 +136,19 @@ const Home = () => {
             alignItems="center"
             mb={"20px"}>¿Quién soy?</Heading>
           <Text>
-            ¡Hola! 👋 Soy un apasionado Desarrollador Full Stack con casi 
-            un año de experiencia. Mi enfoque se centra en la creación de soluciones tecnológicas 
-            eficientes, desde el desarrollo de interfaces dinámicas hasta la implementación 
-            de funcionalidades avanzadas. Tengo experiencia en integración de pasarela de pagos, autenticación de terceros y 
-            metodologías ágiles, estoy listo para contribuir con mi pasión y habilidades a un 
-            equipo dinámico que valore la innovación y la calidad. ¡Espero tener la oportunidad 
+            ¡Hola! 👋 Soy un apasionado Desarrollador Full Stack con casi
+            un año de experiencia. Mi enfoque se centra en la creación de soluciones tecnológicas
+            eficientes, desde el desarrollo de interfaces dinámicas hasta la implementación
+            de funcionalidades avanzadas. Tengo experiencia en integración de pasarela de pagos, autenticación de terceros y
+            metodologías ágiles, estoy listo para contribuir con mi pasión y habilidades a un
+            equipo dinámico que valore la innovación y la calidad. ¡Espero tener la oportunidad
             de hablar contigo! 📩
           </Text>
         </Box>
       </Container>
-      <Container  gap={4} w={"1300px"} display="flex"
-            >
-      <Box
+      <Container gap={4} w={"1300px"} display="flex"
+      >
+        <Box
           borderRadius={"20px"}
           w={"1200px"}
           bg={"#E9FF8B"}
@@ -123,68 +184,74 @@ const Home = () => {
       </Container>
 
       <Stack spacing={4} align="center" display={"flex"} marginTop={"30px"} >
-      <Heading display="flex"
-            justifyContent="flex-start"
-            alignItems="center">Proyectos</Heading>
-      <Box
-      bg={"#E9FF8B"}
-      borderRadius={"20px"}
-        
-        maxW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
-        h={{ base: "200px", md: "250px", lg: "340px" }}
-        ml={{ base: 0, md: "0" }}
-        display="grid"
-        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
-        alignItems={"center"}
-        justifyContent={"center"}
-        
-        transition="transform 0.3s" // Agregamos una transición para suavizar el efecto
-          _hover={{ transform: "scale(1.05)" }}
-      >
-        
-        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0} >
-          <Heading display="flex"
-            justifyContent="center"
-            alignItems="center">Drivers</Heading>
-      <Image
-        w={"300px"}
-        h="200px"
-        src={Drivers}
-        
-        alt="Descripción de la imagen"
-        p={0}
-      />
-      <Button mt={"10px"} ml={"90px"}>Detalles</Button>
-    </Box>
-
-        <Box  w={"300px"} minH={"280px"} m={"40px"}>
         <Heading display="flex"
-            justifyContent="center"
-            alignItems="center">Vamos</Heading>
-          <Image
-          w={"300px"}
-          h="200px"
-          src={Vamos}
-          />
-          <Button mt={"10px"} ml={"90px"}>Detalles</Button>
-        </Box>
+          justifyContent="flex-start"
+          alignItems="center">Proyectos</Heading>
+        <Box
+          bg={"#E9FF8B"}
+          borderRadius={"20px"}
 
-        <Box  w={"300px"} minH={"200px"} m={"40px"} p={0} >
-          <Heading display="flex"
-            justifyContent="center"
-            alignItems="center">Rick&Morty</Heading>
-      <Image
-        w={"300px"}
-        h="200px"
-        src={Rick}
-        
-        alt="Descripción de la imagen"
-        p={0}
-      />
-      <Button mt={"10px"} ml={"90px"}>Detalles</Button>
-    </Box>
-      </Box>
-    </Stack>
+          maxW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
+          h={{ base: "200px", md: "250px", lg: "340px" }}
+          ml={{ base: 0, md: "0" }}
+          display="grid"
+          gridTemplateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
+          alignItems={"center"}
+          justifyContent={"center"}
+
+          transition="transform 0.3s" // Agregamos una transición para suavizar el efecto
+          _hover={{ transform: "scale(1.05)" }}
+        >
+
+          <Box w={"300px"} minH={"200px"} m={"40px"} p={0} >
+            <Heading display="flex"
+              justifyContent="center"
+              alignItems="center">Drivers</Heading>
+            <a href="https://github.com/Josebrav/Drivers" target="_blank" rel="noopener noreferrer">
+              <Image
+                w={"300px"}
+                h="200px"
+                src={Drivers}
+
+                alt="Descripción de la imagen"
+                p={0}
+              />
+            </a>
+            <Button mt={"10px"} ml={"90px"} onClick={abrirDrivers}>Detalles</Button>
+          </Box>
+
+          <Box w={"300px"} minH={"280px"} m={"40px"}>
+            <Heading display="flex"
+              justifyContent="center"
+              alignItems="center">Vamos</Heading>
+            <a href="https://vamos-app.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <Image
+                w={"300px"}
+                h="200px"
+                src={Vamos}
+              />
+            </a>
+            <Button mt={"10px"} ml={"90px"} onClick={abrirVamos}>Detalles</Button>
+          </Box>
+
+          <Box w={"300px"} minH={"200px"} m={"40px"} p={0}>
+            <Heading display="flex" justifyContent="center" alignItems="center">Rick&Morty</Heading>
+            <a href="https://github.com/pi-rym/PI-Josebrav" target="_blank" rel="noopener noreferrer">
+              <Image
+                w={"300px"}
+                h="200px"
+                src={Rick}
+                alt="Descripción de la imagen"
+                p={0}
+              />
+            </a>
+            <Button mt={"10px"} ml={"90px"} onClick={abrirRick}>
+              Detalles
+            </Button>
+
+          </Box>
+        </Box>
+      </Stack>
     </Flex>
   );
 };
