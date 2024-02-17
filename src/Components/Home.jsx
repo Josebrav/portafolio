@@ -131,11 +131,13 @@ const Home = () => {
       borderRadius={"20px"}
         
         maxW={{ base: "70%", md: "70%", lg: "90%", xl: "90%" }}
-        h={{ base: "200px", md: "250px", lg: "300px" }}
+        h={{ base: "200px", md: "250px", lg: "340px" }}
         ml={{ base: 0, md: "0" }}
+        display="grid"
+        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
         alignItems={"center"}
         justifyContent={"center"}
-        display="flex"
+        
         transition="transform 0.3s" // Agregamos una transición para suavizar el efecto
           _hover={{ transform: "scale(1.05)" }}
       >
